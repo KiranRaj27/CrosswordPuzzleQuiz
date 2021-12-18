@@ -1,0 +1,26 @@
+
+
+html,body{
+font-family: 'Numans', sans-serif;
+}
+
+.container{
+    position: relative;
+    
+    top: 0em;
+
+}
+
+.card{
+height: 370px;
+margin-top: 3em;
+margin-bottom: auto;
+width: 400px;
+background-color: rgba(0,0,0,0.5) !important;
+}
+
+#btn{
+    color: blue !important;
+}
+
+

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Crossword Puzzle</title>
+    <link rel="stylesheet" type="text/css" href="css/crosswordPuzzle.css" />
+    <style>
+      body{
+        font-family: 'Courier New', Courier, monospace;
+        /* background-color: aliceblue; */
+        background-image: -webkit-linear-gradient(
+            rgba(0, 0, 0, 0.7),
+            rgba(0, 0, 0, 0.7)
+          ),
+          url(./images/puzzle.jfif);
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.7),
+            rgba(0, 0, 0, 0.7)
+          ),
+          url(./images/puzzle.jfif);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-attachment: fixed;
+      
+      }
+    </style>
+  </head>
+  <body>
+    <h2 style="text-align: center" class="cwp_h2_main">Crossword Puzzle</h2>
+    <div id="identity">
+      <h3 id="dispname">hhh</h3>
+      <h3 id="dispgname">jjj</h3>
+      <h3 id="dispbname">mmmm</h3>
+
+    </div>
+    <div id="myPuzzle">
+      <div id="crosstime">
+        <h2></h2>
+      </div>
+    </div>
+    
+    <script>
+    
+      document.getElementById("dispname").innerText = "Name:"+localStorage.getItem("id1");
+      document.getElementById("dispgname").innerText = "Group:"+localStorage.getItem("id2");
+      document.getElementById("dispbname").innerText = "Batch:"+localStorage.getItem("id3");
+      
+      </script> 
+
+
+    <script src="js/crosswordPuzzle.js" defer></script>
+    <script src="js/activatePuzzle.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crossword Puzzle</title>
+
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    
+    <!--Fontawesome CDN-->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+	<!--Custom styles-->
+	<link rel="stylesheet" type="text/css" href="/css/style.css">
+
+    <link rel="stylesheet" type="text/css" href="css/crosswordPuzzle.css" />
+
+    <style>
+        body{
+          font-family: 'Courier New', Courier, monospace;
+          /* background-color: aliceblue; */
+          background-image: -webkit-linear-gradient(
+              rgba(0, 0, 0, 0.7),
+              rgba(0, 0, 0, 0.7)
+            ),
+            url(./images/puzzle.jfif);
+          background-image: linear-gradient(
+              rgba(0, 0, 0, 0.7),
+              rgba(0, 0, 0, 0.7)
+            ),
+            url(./images/puzzle.jfif);
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: center center;
+          background-attachment: fixed;
+        
+        }
+      </style>
+</head>
+<body>
+    <!-- Logo and ICT Heading -->
+   <div style="display: inline;" id="heads">
+       <img src="./images/logo.png" style="height:60px; width: 60px;" alt="">  
+       <h1 class="headingone">ICTAK TECH FEST '21</h1>
+   </div>
+   
+    <!-- Logo and ICT Heading -->
+
+     <!-- Sub Heading -->
+   <div id="subhead">
+       <h3 style="text-align: center; font-size: 40px;" >FSD B2</h3>
+       <h2 style="text-align: center" class="cwp_h2_main">CROSSWORD PUZZLE</h2>
+
+   </div>
+ <!-- Sub Heading -->
+
+  <!-- Time -->
+
+   <div id="crosstime">
+    <h2></h2>
+  </div>
+  <!-- Time -->
+
+  <!-- Form -->
+  <div class="container">
+	<div class="d-flex justify-content-center h-100">
+		<div class="card">
+			<div class="card-header">
+				
+				
+			</div>
+			<div class="card-body">
+				<form action="puzzle.html">
+					<div class="input-group form-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text"><i class="fas fa-user"></i></span>
+						</div>
+						<input type="text" class="form-control" id="fname" required placeholder="Name">
+						
+					</div>
+                    <div class="input-group form-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text"><i class="fas fa-user"></i></span>
+						</div>
+						<input type="text" class="form-control" id="fgname" required placeholder="GroupName">
+						
+					</div>
+                    <div class="input-group form-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text"><i class="fas fa-user"></i></span>
+						</div>
+						<input type="text"  class="form-control" id="fbname" required placeholder="BatchName-Eg:FSD B2">
+						
+					</div>
+					
+					
+					<div class="form-group">
+						<input type="submit" value="Register" onclick=" loginformsubmit();" style="color: blue;" id="fbtn" class="btn float-right login_btn">
+					</div>
+				</form>
+			</div>
+			
+		</div>
+	</div>
+</div>
+<!-- Form -->
+
+<script>
+    
+    function loginformsubmit()
+        {
+            
+          var names = document.getElementById("fname").value;
+          var grpname = document.getElementById("fgname").value;
+          var btchname = document.getElementById("fbname").value;
+          localStorage.setItem("id1", names);
+          localStorage.setItem("id2", grpname);
+          localStorage.setItem("id3", btchname);
+          return false;
+        }
+        
+    </script>
+
+
+
+    <script src="js/crosswordPuzzle.js" defer></script>
+</body>
+</html>
